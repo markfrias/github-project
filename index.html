@@ -5,33 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emoji Fortune of the Day</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Here's your emoji fortune for today</h1>
+    <header>
+        <h1>Emoji Fortune Teller</h1>
+        <h2>Check your fortune by selecting your zodiac symbol and viewing the emojis destiny has sent you.</h2>
+        <button type="button">Start</button>
+    </header>
 
 
-    <label for="zodiac">Choose your zodiac sign.</label>
-    <select name="zodiac" id="zodiac">
-        <option value="aries">Aries</option>
-        <option value="taurus">Taurus</option>
-        <option value="gemini">Gemini</option>
-        <option value="cancer">Cancer</option>
-        <option value="leo">Leo</option>
-        <option value="virgo">Virgo</option>
-        <option value="libra">Libra</option>
-        <option value="scorpio">Scorpio</option>
-        <option value="sagittarius">Sagittarius</option>
-        <option value="capricorn">Capricorn</option>
-        <option value="aquarius">Aquarius</option>
-        <option value="pisces">Pisces</option>
-    </select>
 
-    <button type="button" id="view-button">View fortune</button>
 
-    <img src="assets/Spinner-1s-200px (1).gif" alt="Loading icon" id="icon-1">
-    <img src="assets/Spinner-1s-200px (1).gif" alt="Loading icon" id="icon-2">
-    <img src="assets/Spinner-1s-200px (1).gif" alt="Loading icon" id="icon-3">
+    <div id="selection">
+        <label for="zodiac">Choose your zodiac sign.</label>
+        <select name="zodiac" id="zodiac">
+            <option value="aries">Aries</option>
+            <option value="taurus">Taurus</option>
+            <option value="gemini">Gemini</option>
+            <option value="cancer">Cancer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="scorpio">Scorpio</option>
+            <option value="sagittarius">Sagittarius</option>
+            <option value="capricorn">Capricorn</option>
+            <option value="aquarius">Aquarius</option>
+            <option value="pisces">Pisces</option>
+        </select>
+        <button type="button" id="view-button">View fortune</button>
+    </div>
+
+
+    <div id="result">
+        <h1>Here's your emoji fortune for today</h1>
+
+        <img src="assets/Spinner-1s-200px (1).gif" alt="Loading icon" id="icon-1" class="icons">
+        <img src="assets/Spinner-1s-200px (1).gif" alt="Loading icon" id="icon-2" class="icons">
+        <img src="assets/Spinner-1s-200px (1).gif" alt="Loading icon" id="icon-3" class="icons">
+    </div>
+
 
     <script src="main.js"></script>
 

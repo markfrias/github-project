@@ -1,0 +1,32 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#selection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#result {
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.icons {
+    align-self: center;
+    min-height: 50px;
+    max-height: 100px;
+}

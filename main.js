@@ -5,6 +5,7 @@ let icon2 = document.getElementById('icon-2');
 let icon3 = document.getElementById('icon-3');
 let viewButton = document.getElementById('view-button');
 let zodiacSelector = document.getElementById('zodiac');
+let resultsSection = document.getElementById('result');
 
 //!!!!!! Add error checking !!!!!
 // Event listeners
@@ -63,6 +64,10 @@ function generateIcons() {
             break;
 
     }
+
+    // Make results visible and into view
+    resultsSection.style.display = "flex";
+    document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
 
     fetchIcons(zodiacNumber);
     console.log(zodiacNumber);
