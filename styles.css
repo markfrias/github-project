@@ -1,5 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+
 }
 
 h2 {
@@ -8,25 +10,73 @@ h2 {
 
 header {
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    background-color: gray;
+    box-sizing: border-box;
+    padding: 10vh 10vw;
+    gap: 2vh;
+}
+
+header > h1, h2 {
+    margin: 0px;
 }
 
 #selection {
     height: 100vh;
-    display: flex;
+    width: 100%;
+    display: none;
     flex-direction: column;
+    justify-content: center;
+    background: teal;
+    box-sizing: border-box;
+    padding: 10vh 10vw;
+    gap: 2vh;
+}
+
+#selection > select {
+    min-height: 25px;
+    max-width: 250px;
+    border: none;
 }
 
 #result {
     display: none;
     height: 100vh;
+    width: 100%;
     flex-direction: column;
+    background: tan;
+    box-sizing: border-box;
+    padding: 10vh 10vw;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#result > h1 {
+    margin: 0px;
+}
+
+
+
+#result > div {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .icons {
     align-self: center;
     min-height: 50px;
     max-height: 100px;
+}
+
+/* Button styles */
+button {
+    max-width: 100px;
+    min-height: 25px;
+    background: white;
+    border: none;
 }

@@ -4,12 +4,38 @@ let icon1 = document.getElementById('icon-1');
 let icon2 = document.getElementById('icon-2');
 let icon3 = document.getElementById('icon-3');
 let viewButton = document.getElementById('view-button');
+let startButton = document.getElementById('start');
+let resetButton = document.getElementById('reset-page');
 let zodiacSelector = document.getElementById('zodiac');
 let resultsSection = document.getElementById('result');
 
 //!!!!!! Add error checking !!!!!
 // Event listeners
 viewButton.addEventListener("click", generateIcons);
+startButton.addEventListener("click", moveToNextSection)
+resetButton.addEventListener("click", resetPage);
+
+function resetPage() {
+    location.reload();
+}
+
+function moveToNextSection() {
+    document.getElementById("header").style.position = "relative";
+
+    let selection = document.getElementById("selection");
+    selection.style.display = "flex";
+    selection.style.position = "relative";
+    
+    selection.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById("header").style.display = "none";
+
+    }, 500);
+
+    //selection.style.position = "absolute";
+    //document.getElementById("header").style.display = "none";
+    
+}
 
 
 function applyIcons(number) {
@@ -67,11 +93,19 @@ function generateIcons() {
 
     // Make results visible and into view
     resultsSection.style.display = "flex";
-    document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+    let result = document.getElementById("result")
+    result.scrollIntoView({ behavior: 'smooth' });
+    result.style.position = "absolute";
+    setTimeout(() => {
+        document.getElementById("selection").style.display = "none";
+
+    }, 500);
+    
 
     fetchIcons(zodiacNumber);
     console.log(zodiacNumber);
     console.log(zodiacWord);
+
 }
 
 async function fetchIcons(zodiacNumber) {
