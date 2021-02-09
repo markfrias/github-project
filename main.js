@@ -30,7 +30,7 @@ function moveToNextSection() {
     setTimeout(() => {
         document.getElementById("header").style.display = "none";
 
-    }, 500);
+    }, 1000);
 
     //selection.style.position = "absolute";
     //document.getElementById("header").style.display = "none";
@@ -99,7 +99,7 @@ function generateIcons() {
     setTimeout(() => {
         document.getElementById("selection").style.display = "none";
 
-    }, 500);
+    }, 1000);
     
 
     fetchIcons(zodiacNumber);
